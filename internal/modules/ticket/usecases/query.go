@@ -187,7 +187,7 @@ func (q queryUsecase) FindOnlineTicket(origCtx context.Context, payload request.
 		}
 	}
 
-	if emptyCounter < 4 {
+	if emptyCounter < 4 && len(*offlineTicket) > 0 {
 		return nil, errors.BadRequest("Offline ticket still available")
 	}
 
