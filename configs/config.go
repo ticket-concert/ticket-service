@@ -28,6 +28,7 @@ type Config struct {
 	ShutDownDelay     string           `envconfig:"shutdown_delay"`
 	SecretHashPass    string           `envconfig:"secret_hash_pass"`
 	IdHash            string           `envconfig:"id_hash"`
+	AppsLimiter       bool             `envconfig:"apps_limiter"`
 }
 
 type HttpServerConfig struct {
